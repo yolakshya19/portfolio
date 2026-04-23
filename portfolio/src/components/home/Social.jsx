@@ -7,6 +7,7 @@ const Social = () => {
         href="https://github.com/yolakshya19"
         className="home__social-icon"
         target="_blank"
+        rel="noreferrer"
       >
         <i className="uil uil-github-alt"></i>
       </a>
@@ -15,6 +16,7 @@ const Social = () => {
         href="https://www.linkedin.com/in/lakshya-dhawan19"
         className="home__social-icon"
         target="_blank"
+        rel="noreferrer"
       >
         <i className="uil uil-linkedin-alt"></i>
       </a>
@@ -23,6 +25,7 @@ const Social = () => {
         href="https://leetcode.com/u/lakshyad1902"
         className="home__social-icon"
         target="_blank"
+        rel="noreferrer"
       >
         <i className="uil uil-code-branch"></i>
       </a>

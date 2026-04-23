@@ -32,6 +32,7 @@ const Footer = () => {
             href="https://github.com/yolakshya19"
             className="footer__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i className="bx bxl-instagram"></i>
           </a>
@@ -40,6 +41,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/lakshya-dhawan19"
             className="footer__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i className="bx bxl-snapchat"></i>
           </a>
@@ -48,6 +50,7 @@ const Footer = () => {
             href="https://leetcode.com/u/lakshyad1902"
             className="footer__social-link"
             target="_blank"
+            rel="noreferrer"
           >
             <i className="bx bxl-twitter"></i>
           </a>
