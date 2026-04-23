@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
 import AboutImg from "../../assets/garden2.jpg";
-import CV from "../../assets/Lakshya_Frontend.pdf";
+import CV from "../../assets/Lakshya_Dhawan_DE.pdf";
 import Info from "./Info";
 
 const About = () => {
@@ -15,9 +15,15 @@ const About = () => {
         <div className="about__data">
           <Info />
           <p className="about__description">
-            I am a third-year CSE student focusing on Data Science 🌱. I'm
-            learning DSA in Java, ReactJS, and exploring Data Science and
-            Generative AI 🤖.
+            Working as a Data Operations Analyst at KPMG India with 1.5 years of
+            experience in ETL pipeline monitoring, backend API development, and
+            data processing systems. Skilled in Python, SQL, and Azure Synapse,
+            with hands-on experience in debugging data pipelines and ensuring
+            reliable data delivery. Recently built end-to-end AI systems including
+            a RAG-based pipeline integrating vector search (FAISS) and LLMs (Mistral),
+            focusing on real-world data + AI system design. Currently expanding
+            expertise in Databricks, distributed data processing, and scalable
+            backend systems.
           </p>
 
           <a download="" href={CV} className="button button__flex">

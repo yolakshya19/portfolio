@@ -7,6 +7,10 @@ const Services = () => {
   const toggleTab = (index) => {
     setToggleState(index);
   };
+
+  const closeModal = () => {
+    setToggleState(0);
+  };
   return (
     <section className="services section" id="services">
       <h2 className="section__title">Projects</h2>
@@ -15,9 +19,9 @@ const Services = () => {
       <div className="services__container container grid">
         <div className="services__content">
           <div>
-            <i className="uil uil-twitter-alt services__icon"></i>
+            <i className="uil uil-brain services__icon"></i>
             <h3 className="services__title">
-              Twitter <br /> Sentiment Analysis
+              RAG Accountability <br /> System
             </h3>
           </div>
 
@@ -32,55 +36,61 @@ const Services = () => {
                 ? "services__modal active-modal"
                 : "services__modal"
             }
+            onClick={closeModal}
           >
-            <div className="services__modal-content">
+            <div className="services__modal-content" onClick={(e) => e.stopPropagation()}>
               <i
                 onClick={() => toggleTab(0)}
                 className="uil uil-times services__modal-close"
               ></i>
 
               <h3 className="services__modal-title">
-                Twitter Sentiment Analysis
+                RAG Accountability System
               </h3>
               <p className="services__modal-description">
-                A project to analyze and determine the sentiment (positive,
-                negative, or neutral) of tweets using machine learning
-                techniques.
+                Built a stateful RAG pipeline with ingestion + retrieval flows,
+                using FAISS vector search, SQLite metadata, and Mistral LLM via
+                Ollama to generate context-aware structured responses.
               </p>
 
               <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Data Collection: Use Twitter's API to gather tweets.
+                    Ingestion Pipeline: Document processing and chunking for
+                    vector embedding.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Data Preprocessing: Clean and normalize tweet text.
+                    Vector Search: FAISS-based semantic similarity search over
+                    embeddings.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Tokenization: Split tweets into individual words.
+                    Metadata Tracking: SQLite storage for document metadata and
+                    retrieval context.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Feature Extraction: Convert text into numerical features.
+                    LLM Integration: Mistral model via Ollama for context-aware
+                    response generation.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Sentiment Analysis: Predict and visualize tweet sentiments.
+                    Structured Output: JSON-formatted responses with source
+                    accountability.
                   </p>
                 </li>
               </ul>
@@ -90,9 +100,9 @@ const Services = () => {
 
         <div className="services__content">
           <div>
-            <i className="uil uil-times-square services__icon"></i>
+            <i className="uil uil-chart-pie-alt services__icon"></i>
             <h3 className="services__title">
-              Tic <br /> Tac Toe
+              Reddit Sentiment <br /> Pipeline 
             </h3>
           </div>
 
@@ -107,52 +117,61 @@ const Services = () => {
                 ? "services__modal active-modal"
                 : "services__modal"
             }
+            onClick={closeModal}
           >
-            <div className="services__modal-content">
+            <div className="services__modal-content" onClick={(e) => e.stopPropagation()}>
               <i
                 onClick={() => toggleTab(0)}
                 className="uil uil-times services__modal-close"
               ></i>
 
-              <h3 className="services__modal-title">Tic Tac Toe</h3>
+              <h3 className="services__modal-title">
+                Reddit Sentiment Pipeline
+              </h3>
               <p className="services__modal-description">
-                A simple Tic-Tac-Toe game implemented using JavaScript.
+                Developed a FastAPI-based pipeline to ingest Reddit data,
+                perform NLP preprocessing, and classify sentiment using
+                DistilBERT with aggregated scoring outputs.
               </p>
 
               <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Game Setup: Create a 3x3 grid for the game board.
+                    Data Ingestion: Reddit API integration for real-time data
+                    collection.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    User Interface: Use HTML and CSS to design the game board.
+                    NLP Preprocessing: Text cleaning, tokenization, and
+                    normalization.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Player Turns: Alternate turns between two players (X and O).
+                    Sentiment Model: DistilBERT-based classification with
+                    confidence scores.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Move Validation: Check for valid moves and update the board.
+                    Aggregation Engine: Combined scoring for overall sentiment
+                    analysis.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Win Detection: Determine if a player has won or if the game
-                    is a draw.
+                    REST API: FastAPI endpoints for pipeline access and
+                    monitoring.
                   </p>
                 </li>
               </ul>
@@ -162,10 +181,9 @@ const Services = () => {
 
         <div className="services__content">
           <div>
-            <i className="uil uil-video services__icon"></i>
+            <i className="uil uil-heart services__icon"></i>
             <h3 className="services__title">
-              Vid <br />
-              Glow
+              FitTrack <br /> (MERN App)
             </h3>
           </div>
 
@@ -180,54 +198,58 @@ const Services = () => {
                 ? "services__modal active-modal"
                 : "services__modal"
             }
+            onClick={closeModal}
           >
-            <div className="services__modal-content">
+            <div className="services__modal-content" onClick={(e) => e.stopPropagation()}>
               <i
                 onClick={() => toggleTab(0)}
                 className="uil uil-times services__modal-close"
               ></i>
 
-              <h3 className="services__modal-title">Vid Glow</h3>
+              <h3 className="services__modal-title">FitTrack (MERN App)</h3>
               <p className="services__modal-description">
-                A video-sharing platform where users can watch and upload
-                videos.
+                Full-stack fitness tracking system with MongoDB, Express, React,
+                and Node, including dashboard analytics, authentication, and
+                API-based data handling.
               </p>
 
               <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    User Registration: Allow users to sign up and log in.
+                    User Authentication: JWT-based secure login and registration
+                    system.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Video Upload: Enable users to upload videos to the platform.
+                    Dashboard Analytics: Visual charts and progress tracking for
+                    fitness metrics.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Video Playback: Stream uploaded videos for users to watch.
+                    Data Management: MongoDB schemas for workouts, nutrition,
+                    and user stats.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    User Interaction: Implement features like comments, likes,
-                    and shares.
+                    RESTful API: Node.js/Express backend with CRUD operations.
                   </p>
                 </li>
 
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Responsive Design: Ensure the platform works well on various
-                    devices.
+                    Responsive UI: React frontend with modern design and mobile
+                    support.
                   </p>
                 </li>
               </ul>

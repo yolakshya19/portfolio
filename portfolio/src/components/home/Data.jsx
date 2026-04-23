@@ -55,9 +55,9 @@ const Data = () => {
           ></path>
         </svg>
       </h1>
-      <h3 className="home__subtitle">Frontend Developer💻</h3>
+      <h3 className="home__subtitle">Data Engineer / Gen AI Engineer</h3>
       <p className="home__description">
-        Data Science Enthusiast 📊 | Java & React Developer 💻 | AI Explorer 🤖.
+        Data Engineer ⚙️ | Backend & API Developer 💻 | GenAI Builder (RAG, LLMs) 🤖
       </p>
 
       <a href="#contact" className="button button--flex">
